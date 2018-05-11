@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div style="margin-top: 60px">
+<h2>JS与原生交互(UIWebView)</h2>
+<input type="button" value="h5唤起原生方法(call)" onclick="JKAPP.call()">
+</div>
+<div>
+<input type="button" value="h5唤起原生方法getCall:(NSString *)callString传值,并且原生回调h5" onclick="call()">
+</div>
+
+<script>
+    
+    
+    
+var call = function()
+{
+    alert('sdad');
+    var callInfo = JSON.stringify({"jianshu": "http://www.baidu.com"});
+    JKAPP.getCall(callInfo);
+}
+
+function alerCallback(str)
+{
+    alert('原生调用成功' + str);
+}
+</script>
+</body>
+</html>

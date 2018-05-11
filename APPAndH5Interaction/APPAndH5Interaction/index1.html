@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div style="margin-top: 60px">
+<h2>JS与原生交互(UIWebView)</h2>
+<input type="button" value="h5唤起原生方法(call)" onclick="call()">
+</div>
+
+<script>
+    
+    
+    
+var call = function()
+{
+    window.webkit.messageHandlers.call.postMessage("h5调用原生!");
+}
+
+function alerCallback(str)
+{
+    alert('原生调用成功' + str);
+}
+</script>
+</body>
+</html>
